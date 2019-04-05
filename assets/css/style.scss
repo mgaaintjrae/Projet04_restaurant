@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    height: 0;
+}
+
+body {
+
+    header {
+        height: 750px;
+        width: 100%;
+        background-image: url("../images/fond_promo.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+
+        #navbar {
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            background-image: url("../images/header_background.png");
+
+
+
+            nav {
+                margin: 0 13% 0 13%;
+                height: 100px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                a {
+                    #logo {}
+                }
+
+                .menu {
+                    list-style: none;
+                    display: flex;
+                    color: white;
+                    width: 65%;
+                    margin: auto 5px;
+                    justify-content: space-around;
+
+                }
+
+                .icons {
+                    width: auto;
+                    list-style: none;
+                    display: contents;
+                }
+            }
+        }
+    }
+
+    #promo {
+        .content {
+            margin: 10% 18% 0 18%;
+            width: 63vw;
+            height: 650px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+        }
+    }
+
+}
