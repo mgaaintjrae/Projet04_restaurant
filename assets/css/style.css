@@ -1,44 +1,255 @@
+/* ************** VARIABLES ************** */
+/* ************** POLICES **************** */
+@font-face {
+  font-family: "gentium";
+  src: url("assets/fonts/GentiumBookBasicRegular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "yeseva";
+  src: url("assets/fonts/YesevaOne-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lato";
+  src: url("assets/fonts/Lato-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "opensans";
+  src: url("assets/fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
-  height: 0; }
+  height: 0;
+}
 
+h1,
+h2,
+h3 {
+  font-family: 'yeseva one';
+}
+
+a {
+  text-decoration: none;
+  color: #f4f4f5;
+}
+
+/* ********************* HEADER ************************ */
 body header {
   height: 750px;
   width: 100%;
   background-image: url("../images/fond_promo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
-  body header #navbar {
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    background-image: url("../images/header_background.png"); }
-    body header #navbar nav {
-      margin: 0 13% 0 13%;
-      height: 100px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center; }
-      body header #navbar nav .menu {
-        list-style: none;
-        display: flex;
-        color: white;
-        width: 65%;
-        margin: auto 5px;
-        justify-content: space-around; }
-      body header #navbar nav .icons {
-        width: auto;
-        list-style: none;
-        display: contents; }
-body #promo .content {
-  margin: 10% 18% 0 18%;
-  width: 63vw;
-  height: 650px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute; }
+  background-attachment: fixed;
+}
 
+body header #navbar {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-image: url("../images/header_background.png");
+}
+
+body header #navbar nav {
+  margin: 0 13% 0 8%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header #navbar nav a {
+  display: contents;
+}
+
+body header #navbar nav a #logo {
+  width: 156px;
+  height: 92px;
+}
+
+body header #navbar nav .menu {
+  font-family: "gentium book basic";
+  font-size: 1.1em;
+  font-weight: bold;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  width: 65%;
+  margin: auto 5px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body header #navbar nav .menu li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  opacity: 0;
+  -webkit-transition: background .3s, width .2s;
+  transition: background .3s, width .2s;
+}
+
+body header #navbar nav .icons {
+  width: auto;
+  list-style: none;
+  display: contents;
+}
+
+body header #navbar nav .icons li a {
+  color: #dab33e;
+}
+
+body #promo .content {
+  height: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #promo .content h1 {
+  color: #f4f4f5;
+  margin-bottom: 10%;
+  font-size: 5em;
+  width: 70%;
+  text-align: center;
+  font-weight: normal;
+}
+
+body #promo .content img {
+  height: 40px;
+  margin: -13% 0% -18% 0%;
+}
+
+body #promo .content .button {
+  height: 55px;
+  width: 490px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #promo .content .button .left {
+  height: 55px;
+  width: 230px;
+  font-family: 'lato';
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 12, 0.493);
+  border: none;
+  color: #f4f4f5;
+  font-size: 1.1em;
+}
+
+body #promo .content .button .right {
+  height: 55px;
+  width: 230px;
+  font-family: 'lato';
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #f4f4f5;
+  font-size: 1.1em;
+}
+
+body #promo .content .button :hover {
+  border: 0.1px white solid;
+  background-color: rgba(250, 249, 249, 0.349);
+}
+
+body main .container-fluid {
+  width: 100%;
+  height: 750px;
+  background-color: white;
+  background-image: url("../images/pattern.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border: 5px black solid;
+}
+
+body main .container-fluid .row {
+  padding: 5% 5% 5% 5%;
+}
+
+body main .container-fluid .row .col-lg-6 {
+  height: auto;
+  padding-top: 7%;
+  border: 2px red solid;
+}
+
+body main .container-fluid .row .col-lg-6 h2 {
+  height: auto;
+  text-align: center;
+  color: #dab33e;
+}
+
+body main .container-fluid .row .col-lg-6 .divider {
+  width: 230px;
+  height: 20px;
+  height: auto;
+  margin-left: 25%;
+}
+
+body main .container-fluid .row .col-lg-6 .text {
+  height: 130px;
+  font-family: 'lato';
+  text-align: center;
+  font-size: 0.8em;
+  padding: 6% 13% 0% 13%;
+}
+
+body main .container-fluid .row .col-lg-6 .cook {
+  width: 219px;
+  height: 221px;
+}
+
+body main .container-fluid .row .col-lg-6 {
+  height: auto;
+  border: 2px red solid;
+}
+
+body main .container-fluid .row .col-lg-6 img {
+  width: 621px;
+  height: 625px;
+}
 /*# sourceMappingURL=style.css.map */

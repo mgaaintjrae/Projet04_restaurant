@@ -22,6 +22,7 @@
     <meta name="twitter:url" content="lien du site/" />
     <meta name="twitter:title" content="Restaurant Lambda" />
     <meta name="twitter:description" content="Restauration étudiée, semi-gastronomique">
+    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -31,7 +32,7 @@
 
 <body>
 
-    <!-- ***************************************************header********************************************************** -->
+    <!-- *************************************************** HEADER ************************************************************************** -->
 
     <header>
 
@@ -39,13 +40,12 @@
 
             <nav>
 
-                <a href="#"><img id="logo" src="../assets/images/logo.png" alt="logo lambda" width="156"
-                        height="92"></a>
+                <a href="#"><img id="logo" src="assets/images/logo.png" alt="logo lambda" width="156" height="92"></a>
 
                 <ul class="menu">
                     <li>Home</li>
-                    <li id="about">About</li>
-                    <li id="ingredients">Ingredients</li>
+                    <li>About</li>
+                    <li>Ingredients</li>
                     <li>Menu</li>
                     <li>Reviews</li>
                     <li>Reservations</li>
@@ -62,31 +62,57 @@
         <section id="promo">
             <div class="content">
                 <h1>the right ingredients for the right food</h1>
-                <div class="divider"><img src="/assets/images/divider_promo.png"></div>
-                <ul>
-                    <li class="button_black">BOOK A TABLE</li>
-                    <li class="button_white">SEE THE MENU</li>
-                    <button type=button>BOOK A TABLE</button>
-                </ul>
+                <img src="assets/images/divider_promo.png" width="232" height="43">
+                <div class="button">
+                    <a href="http://lambda.oxygenna.com/restaurant" target="_blank"><button class="left"
+                            type=button>BOOK A
+                            TABLE</button></a>
+                    <a href="http://lambda.oxygenna.com/restaurant/menu/" target="_blank"><button class="right"
+                            type=button>SEE A
+                            MENU</button></a>
+                </div>
+
+
+
             </div>
         </section>
 
     </header>
 
-    <!-- <main>
-        <section id="about">
-            <div class="content">
-                <div class="part_left">
+    <!-- ******************************************************** MAIN ********************************************************************-->
+    <main>
+
+        <!-- ****** Section ABOUT ****** -->
+
+        <section class="container-fluid">
+            <!-- prend 100% de la largeur -->
+
+            <div class="row justify-content-lg-center">
+
+                <div class="col-lg-6">
                     <h2>Just the right food</h2>
-                    <div class="divider"><img src="/assets/images/divider_about.png></div>
-                    <div class=" text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps
-                        our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda
-                        cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
+                    <img class="divider" src="assets/images/divider_about.png" alt="séparation décoration" width="247"
+                        height="24">
+                    <div class=" text">If you’ve been to one of our restaurants, you’ve seen – and tasted –
+                        what keeps
+                        our customers coming back for more. Perfect materials and freshly baked food,
+                        delicious Lambda
+                        cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check
+                        us out!
                     </div>
-                    <div class="cook"></div>
+                    <img class="cook" src="assets/images/cook.png"
+                        alt="cuisiner dressant minutieusement son plat avec sa signature" width="219" height="221">
+
                 </div>
+                <div class="col-lg-6">
+                    <img src="assets/images/dish.png"
+                        alt="assiette blanche ronde avec entrecotes cuisinées avec légumes" width="621" height="625">
+                </div>
+
+
             </div>
 
+            </div>
         </section>
         <section id="ingredients">
 
@@ -104,7 +130,7 @@
 
         </section>
 
-    </footer> -->
+    </footer>
 
 </body>
 
