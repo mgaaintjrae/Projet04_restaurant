@@ -40,11 +40,6 @@ h3 {
   font-family: 'yeseva one';
 }
 
-a {
-  text-decoration: none;
-  color: #f4f4f5;
-}
-
 /* ********************* HEADER ************************ */
 body {
   /* ******************** MAIN ********************* */
@@ -104,11 +99,20 @@ body header #navbar nav .menu {
   -ms-flex-item-align: center;
       align-self: center;
   padding-left: 19%;
-  padding-bottom: 1%;
   color: #f4f4f5;
 }
 
+body header #navbar nav .menu li a {
+  text-decoration: none;
+  color: #f4f4f5;
+}
+
+body header #navbar nav .menu li a:hover {
+  color: #dab33e;
+}
+
 body header #navbar nav .icons {
+  color: #dab33e;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,65 +121,78 @@ body header #navbar nav .icons {
       align-self: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0 3% 1% 0;
+  padding-right: 3%;
   margin-left: -2%;
   line-height: 2;
 }
 
-body header #navbar nav .icons i:hover {
+body header #navbar nav .icons li a {
   color: #dab33e;
+}
+
+body header #navbar nav .icons li a:hover {
+  color: #f4f4f5;
 }
 
 body header #promo {
   height: 750px;
 }
 
-body header #promo .row #title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body header #promo .row #title_haut {
+  text-align: center;
 }
 
-body header #promo .row h1 {
+body header #promo .row #title_haut h1 {
   color: #f4f4f5;
   text-shadow: 1px 1px #000000;
-  margin-top: 10%;
   font-size: 82px;
-  width: 70%;
-  text-align: center;
-  font-weight: normal;
+  width: 100%;
 }
 
-body header #promo .row img {
+body header #promo .row #title_bas {
+  text-align: center;
+}
+
+body header #promo .row #title_bas h1 {
+  color: #f4f4f5;
+  text-shadow: 1px 1px #000000;
+  font-size: 82px;
+  width: 100%;
+}
+
+body header #promo .row_divider img {
   display: block;
   height: auto;
+  width: 232px;
   margin-left: auto;
   margin-right: auto;
-  width: 180px;
-  margin-top: 11%;
 }
 
-body header #promo .row #button {
-  width: 490px;
+body header #promo .row_button #button {
+  width: 100%;
   opacity: 0.8;
-  margin-bottom: 13%;
+  bottom: -40px;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body header #promo .row #button .left {
+body header #promo .row_button #button a {
+  margin-right: 2%;
+}
+
+body header #promo .row_button #button a .left {
   height: 55px;
   width: 230px;
   font-family: 'lato';
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(0, 0, 12, 0.493);
+  background-color: rgba(0, 0, 0, 0.8);
   border: none;
   color: #f4f4f5;
   font-size: 1.1em;
@@ -183,14 +200,18 @@ body header #promo .row #button .left {
   transition: all 0.3s ease 0s;
 }
 
-body header #promo .row #button .right {
+body header #promo .row_button #button a {
+  margin-left: 2%;
+}
+
+body header #promo .row_button #button a .right {
   height: 55px;
   width: 230px;
   font-family: 'lato';
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   border: none;
   color: #f4f4f5;
   font-size: 1.1em;
@@ -198,8 +219,8 @@ body header #promo .row #button .right {
   transition: all 0.3s ease 0s;
 }
 
-body header #promo .row #button :hover {
-  border: 0.1px white solid;
+body header #promo .row_button #button :hover {
+  border: 0.9px white solid;
   background-color: rgba(250, 249, 249, 0.349);
 }
 
