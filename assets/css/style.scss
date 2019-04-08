@@ -61,16 +61,17 @@ body {
     header {
         height: 750px;
         width: 100%;
-        background-image: url("../images/fond_promo.jpg");
-        background-repeat: no-repeat;
+        background: url("../images/fond_promo.jpg") no-repeat fixed;
         background-size: cover;
-        background-attachment: fixed;
+
 
         #navbar {
+            z-index: 1;
             position: fixed;
             width: 100%;
             height: 100px;
-            background-image: url("../images/header_background.png");
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+            /* dégradé noir transparent de la navbar */
 
             nav {
                 margin: 0 13% 0 8%;
@@ -85,7 +86,10 @@ body {
                     #logo {
                         width: 156px;
                         height: 92px;
+                    }
 
+                    a:hover {
+                        color: $jaune;
                     }
                 }
 
@@ -103,7 +107,7 @@ body {
                     li {
 
                         a:before {
-                            content: "";
+
                             display: block;
                             position: absolute;
                             top: 0;
@@ -131,128 +135,138 @@ body {
                 }
             }
         }
-    }
 
-    #promo {
-        .content {
-            height: 750px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
 
-            h1 {
-                color: $blanc;
-                margin-bottom: 10%;
-                font-size: 5em;
-                width: 70%;
-                text-align: center;
-                font-weight: normal;
-            }
+        /* *** SECTION PROMO *** */
 
-            img {
-                height: 40px;
-                margin: -13% 0% -18% 0%;
-
-            }
-
-            .button {
-                height: 55px;
-                width: 490px;
-                list-style: none;
+        #promo {
+            .content {
+                height: 750px;
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
 
-
-                .left {
-                    height: 55px;
-                    width: 230px;
-                    font-family: 'lato';
-                    justify-content: center;
-                    background-color: rgba(0, 0, 12, 0.493);
-                    border: none;
+                h1 {
                     color: $blanc;
-                    font-size: 1.1em;
+                    text-shadow: 1px 1px #000000;
+                    margin-top: 10%;
+                    font-size: 82px;
+                    width: 70%;
+                    text-align: center;
+                    font-weight: normal;
                 }
 
-                .right {
-                    height: 55px;
-                    width: 230px;
-                    font-family: 'lato';
-                    justify-content: center;
-                    background-color: rgba(0, 0, 0, 0.5);
-                    border: none;
-                    color: $blanc;
-                    font-size: 1.1em;
+                img {
+                    display: block;
+                    height: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 180px;
+                    margin-top: 11%;
 
                 }
 
+                .button {
+                    width: 490px;
+                    opacity: 0.8;
+                    margin-bottom: 13%;
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
 
-                :hover {
 
-                    border: 0.1px white solid;
-                    background-color: rgba(250, 249, 249, 0.349)
+                    .left {
+                        height: 55px;
+                        width: 230px;
+                        font-family: 'lato';
+                        justify-content: center;
+                        background-color: rgba(0, 0, 12, 0.493);
+                        border: none;
+                        color: $blanc;
+                        font-size: 1.1em;
+                        transition: all 0.3s ease 0s;
+                    }
+
+                    .right {
+                        height: 55px;
+                        width: 230px;
+                        font-family: 'lato';
+                        justify-content: center;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        border: none;
+                        color: $blanc;
+                        font-size: 1.1em;
+                        transition: all 0.3s ease 0s;
+                    }
+
+                    :hover {
+                        border: 0.1px white solid;
+                        background-color: rgba(250, 249, 249, 0.349)
+                    }
                 }
             }
-
-
-
         }
-
     }
+
+    /* ******************** MAIN ********************* */
 
     main {
+
+        /* *** SECTION ABOUT *** */
         .container-fluid {
-            width: 100%;
-            height: 750px;
+            // width: 100%;
+            height: 710px;
             background-color: white;
-            background-image: url("../images/pattern.png");
-            background-repeat: no-repeat;
+            background: url("../images/pattern.png") no-repeat fixed;
             background-size: cover;
-            background-attachment: fixed;
-            border: 5px black solid;
 
             .row {
-                padding: 5% 5% 5% 5%;
-                .col-lg-6 {
+                padding: 3% 5% 5% 5%;
+
+                .col-md-6 {
                     height: auto;
-                    padding-top: 7%;
-                    border: 2px red solid;
+                    padding-top: 4%;
+
 
                     h2 {
                         height: auto;
                         text-align: center;
                         color: $jaune;
+                        font-size: 2.5em;
                     }
 
                     .divider {
-                        width: 230px;
-                        height: 20px;
+                        width: 50%;
+                        display: block;
                         height: auto;
-                        margin-left: 25%;
+                        margin: 5% auto 0 auto;
                     }
 
                     .text {
-                        height: 130px;
-                        font-family: 'lato';
+                        font-size: 1.1em;
+                        font-family: "Lato";
+                        color: #4c4c4c;
                         text-align: center;
-                        font-size: 0.8em;
-                        padding: 6% 13% 0% 13%;
+                        padding: 9% 11% 9% 11%;
                     }
 
                     .cook {
-                        width: 219px;
-                        height: 221px;
+                        width: 192px;
+                        height: 195px;
+                        display: block;
+                        margin: 30% auto 0px 41%;
                     }
                 }
 
-                .col-lg-6 {
+                .col-md-6 {
                     height: auto;
-                    border: 2px red solid;
+
 
                     img {
                         width: 621px;
                         height: 625px;
+                        margin: -5% 0% 0% 2%;
 
                     }
 
@@ -260,6 +274,149 @@ body {
             }
 
         }
-    }
 
+        /* ***SECTION INGREDIENTS*** */
+
+        .container-fluid2 {
+            min-height: 750px;
+            background: url("../images/fond_ingredients.jpg") no-repeat fixed;
+            background-size: cover;
+
+            .container {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+
+                .row {
+                    .col-md-6 {
+                        width: 570px;
+                        height: 557px;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        margin: 100px 0 100px 0;
+                        padding: 50px;
+                        text-align: center;
+                        background-image: url("../images/fond_noir_translucide.png");
+
+                        h3 {
+                            color: $blanc;
+                            font-size: 2.3em;
+                        }
+
+                        .divider {
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 247px;
+                            height: 24px;
+                            margin-top: 62px;
+                            margin-bottom: 20px;
+                        }
+
+                        p {
+                            color: $blanc;
+                            font-size: 1em;
+                            display: block;
+                            margin: 5% 0% 39% 0%;
+                        }
+
+                        .epice {
+                            height: 90px;
+                            width: 90px;
+                            margin: 10px 10px;
+                            display: inline-block;
+                            border-radius: 50%;
+                            border-style: solid;
+                            // border-color: rgba(255, 255, 255, 0.1);
+
+
+                        }
+
+                        :hover {
+                            border-color: rgba(255, 255, 255, 0.4);
+                        }
+
+
+                    }
+                }
+            }
+
+        }
+
+        /* ***SECTION INGREDIENTS*** */
+
+        .container-fluid3 {
+            min-height: 990px;
+            background: url("../images/pattern_menu.jpg") no-repeat fixed;
+            background-size: cover;
+        }
+
+        /* ***SECTION REVIEWS*** */
+
+        .container-fluid4 {
+            min-height: 750px;
+            background: url("../images/fond_reviews.jpg") no-repeat fixed;
+            background-size: cover;
+
+            .container {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+
+                .row {
+                    .col-lg-6 {
+                        width: 770px;
+                        height: 557px;
+                        background-image: url("../images/fond_noir_translucide_reviews.png");
+                        margin: 100px 0 100px 0;
+                        padding: 50px;
+                        text-align: center;
+
+                        h3 {
+                            color: $blanc;
+                            font-size: 2.2em;
+                            margin-top: 48px;
+                        }
+
+                        .divider {
+                            width: 247px;
+                            height: 24px;
+                            display: block;
+                            margin-top: 61px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+
+                        i {
+                            display: block;
+                            margin: 10% 96% 0% -10%;
+                            color: #9fa29e;
+                        }
+
+                        .text {
+                            color: #dde0df;
+                            display: block;
+                            margin-top: 7px;
+                        }
+
+                        .fin {
+                            color: #dde0df;
+                            display: block;
+                            font-size: 0.8em;
+                            margin-left: auto;
+                            margin-right: auto;
+                            margin-top: 196px;
+                        }
+                    }
+
+
+
+
+                }
+            }
+        }
+    }
 }

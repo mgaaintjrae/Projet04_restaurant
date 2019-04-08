@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ************** VARIABLES ************** */
 /* ************** POLICES **************** */
 @font-face {
@@ -45,20 +46,26 @@ a {
 }
 
 /* ********************* HEADER ************************ */
+body {
+  /* ******************** MAIN ********************* */
+}
+
 body header {
   height: 750px;
   width: 100%;
-  background-image: url("../images/fond_promo.jpg");
-  background-repeat: no-repeat;
+  background: url("../images/fond_promo.jpg") no-repeat fixed;
   background-size: cover;
-  background-attachment: fixed;
+  /* *** SECTION PROMO *** */
 }
 
 body header #navbar {
+  z-index: 1;
   position: fixed;
   width: 100%;
   height: 100px;
-  background-image: url("../images/header_background.png");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(black));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), black);
+  /* dégradé noir transparent de la navbar */
 }
 
 body header #navbar nav {
@@ -83,6 +90,10 @@ body header #navbar nav a #logo {
   height: 92px;
 }
 
+body header #navbar nav a a:hover {
+  color: #dab33e;
+}
+
 body header #navbar nav .menu {
   font-family: "gentium book basic";
   font-size: 1.1em;
@@ -99,7 +110,6 @@ body header #navbar nav .menu {
 }
 
 body header #navbar nav .menu li a:before {
-  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -122,7 +132,7 @@ body header #navbar nav .icons li a {
   color: #dab33e;
 }
 
-body #promo .content {
+body header #promo .content {
   height: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,23 +149,29 @@ body #promo .content {
           align-items: center;
 }
 
-body #promo .content h1 {
+body header #promo .content h1 {
   color: #f4f4f5;
-  margin-bottom: 10%;
-  font-size: 5em;
+  text-shadow: 1px 1px #000000;
+  margin-top: 10%;
+  font-size: 82px;
   width: 70%;
   text-align: center;
   font-weight: normal;
 }
 
-body #promo .content img {
-  height: 40px;
-  margin: -13% 0% -18% 0%;
+body header #promo .content img {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  margin-top: 11%;
 }
 
-body #promo .content .button {
-  height: 55px;
+body header #promo .content .button {
   width: 490px;
+  opacity: 0.8;
+  margin-bottom: 13%;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,7 +181,7 @@ body #promo .content .button {
           justify-content: space-between;
 }
 
-body #promo .content .button .left {
+body header #promo .content .button .left {
   height: 55px;
   width: 230px;
   font-family: 'lato';
@@ -176,9 +192,11 @@ body #promo .content .button .left {
   border: none;
   color: #f4f4f5;
   font-size: 1.1em;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-body #promo .content .button .right {
+body header #promo .content .button .right {
   height: 55px;
   width: 230px;
   font-family: 'lato';
@@ -189,67 +207,198 @@ body #promo .content .button .right {
   border: none;
   color: #f4f4f5;
   font-size: 1.1em;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-body #promo .content .button :hover {
+body header #promo .content .button :hover {
   border: 0.1px white solid;
   background-color: rgba(250, 249, 249, 0.349);
 }
 
+body main {
+  /* *** SECTION ABOUT *** */
+  /* ***SECTION INGREDIENTS*** */
+  /* ***SECTION INGREDIENTS*** */
+  /* ***SECTION REVIEWS*** */
+}
+
 body main .container-fluid {
-  width: 100%;
-  height: 750px;
+  height: 710px;
   background-color: white;
-  background-image: url("../images/pattern.png");
-  background-repeat: no-repeat;
+  background: url("../images/pattern.png") no-repeat fixed;
   background-size: cover;
-  background-attachment: fixed;
-  border: 5px black solid;
 }
 
 body main .container-fluid .row {
-  padding: 5% 5% 5% 5%;
+  padding: 3% 5% 5% 5%;
 }
 
-body main .container-fluid .row .col-lg-6 {
+body main .container-fluid .row .col-md-6 {
   height: auto;
-  padding-top: 7%;
-  border: 2px red solid;
+  padding-top: 4%;
 }
 
-body main .container-fluid .row .col-lg-6 h2 {
+body main .container-fluid .row .col-md-6 h2 {
   height: auto;
   text-align: center;
   color: #dab33e;
+  font-size: 2.5em;
 }
 
-body main .container-fluid .row .col-lg-6 .divider {
-  width: 230px;
-  height: 20px;
+body main .container-fluid .row .col-md-6 .divider {
+  width: 50%;
+  display: block;
   height: auto;
-  margin-left: 25%;
+  margin: 5% auto 0 auto;
 }
 
-body main .container-fluid .row .col-lg-6 .text {
-  height: 130px;
-  font-family: 'lato';
+body main .container-fluid .row .col-md-6 .text {
+  font-size: 1.1em;
+  font-family: "Lato";
+  color: #4c4c4c;
   text-align: center;
-  font-size: 0.8em;
-  padding: 6% 13% 0% 13%;
+  padding: 9% 11% 9% 11%;
 }
 
-body main .container-fluid .row .col-lg-6 .cook {
-  width: 219px;
-  height: 221px;
+body main .container-fluid .row .col-md-6 .cook {
+  width: 192px;
+  height: 195px;
+  display: block;
+  margin: 30% auto 0px 41%;
 }
 
-body main .container-fluid .row .col-lg-6 {
+body main .container-fluid .row .col-md-6 {
   height: auto;
-  border: 2px red solid;
 }
 
-body main .container-fluid .row .col-lg-6 img {
+body main .container-fluid .row .col-md-6 img {
   width: 621px;
   height: 625px;
+  margin: -5% 0% 0% 2%;
+}
+
+body main .container-fluid2 {
+  min-height: 750px;
+  background: url("../images/fond_ingredients.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
+body main .container-fluid2 .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body main .container-fluid2 .container .row .col-md-6 {
+  width: 570px;
+  height: 557px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 100px 0 100px 0;
+  padding: 50px;
+  text-align: center;
+  background-image: url("../images/fond_noir_translucide.png");
+}
+
+body main .container-fluid2 .container .row .col-md-6 h3 {
+  color: #f4f4f5;
+  font-size: 2.3em;
+}
+
+body main .container-fluid2 .container .row .col-md-6 .divider {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 247px;
+  height: 24px;
+  margin-top: 62px;
+  margin-bottom: 20px;
+}
+
+body main .container-fluid2 .container .row .col-md-6 p {
+  color: #f4f4f5;
+  font-size: 1em;
+  display: block;
+  margin: 5% 0% 39% 0%;
+}
+
+body main .container-fluid2 .container .row .col-md-6 .epice {
+  height: 90px;
+  width: 90px;
+  margin: 10px 10px;
+  display: inline-block;
+  border-radius: 50%;
+  border-style: solid;
+}
+
+body main .container-fluid2 .container .row .col-md-6 :hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+body main .container-fluid3 {
+  min-height: 990px;
+  background: url("../images/pattern_menu.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
+body main .container-fluid4 {
+  min-height: 750px;
+  background: url("../images/fond_reviews.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
+body main .container-fluid4 .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body main .container-fluid4 .container .row .col-lg-6 {
+  width: 770px;
+  height: 557px;
+  background-image: url("../images/fond_noir_translucide_reviews.png");
+  margin: 100px 0 100px 0;
+  padding: 50px;
+  text-align: center;
+}
+
+body main .container-fluid4 .container .row .col-lg-6 h3 {
+  color: #f4f4f5;
+  font-size: 2.2em;
+  margin-top: 48px;
+}
+
+body main .container-fluid4 .container .row .col-lg-6 .divider {
+  width: 247px;
+  height: 24px;
+  display: block;
+  margin-top: 61px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body main .container-fluid4 .container .row .col-lg-6 i {
+  display: block;
+  margin: 10% 96% 0% -10%;
+  color: #9fa29e;
+}
+
+body main .container-fluid4 .container .row .col-lg-6 .text {
+  color: #dde0df;
+  display: block;
+  margin-top: 7px;
+}
+
+body main .container-fluid4 .container .row .col-lg-6 .fin {
+  color: #dde0df;
+  display: block;
+  font-size: 0.8em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 196px;
 }
 /*# sourceMappingURL=style.css.map */

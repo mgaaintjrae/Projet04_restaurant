@@ -22,12 +22,19 @@
     <meta name="twitter:url" content="lien du site/" />
     <meta name="twitter:title" content="Restaurant Lambda" />
     <meta name="twitter:description" content="Restauration étudiée, semi-gastronomique">
-    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- **** CDN de BOOTSTRAP **** -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- **** Fin CDN **** -->   
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- favicon -->
-    <link rel="icon" type="image.ico" href="assets/images/favicon.ico" />
+    <link rel="icon" type="image.ico" href="assets/images/favicon.png" />
 </head>
 
 <body>
@@ -89,7 +96,7 @@
 
             <div class="row justify-content-lg-center">
 
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <h2>Just the right food</h2>
                     <img class="divider" src="assets/images/divider_about.png" alt="séparation décoration" width="247"
                         height="24">
@@ -104,24 +111,128 @@
                         alt="cuisiner dressant minutieusement son plat avec sa signature" width="219" height="221">
 
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <img src="assets/images/dish.png"
                         alt="assiette blanche ronde avec entrecotes cuisinées avec légumes" width="621" height="625">
                 </div>
-
-
             </div>
-
             </div>
         </section>
-        <section id="ingredients">
+
+        <!-- ****** Section INGREDIENTS ****** -->
+
+        <section id="ingredients" class="container-fluid2 d-flex flex-column ">
+            <div class="container">
+                <div class="row justify-content-lg-end">
+                    <div class="col-md-6">
+                        <h3>Fine ingredients</h3>
+                        <img class="divider" src="assets/images/divider_ingredients.png" alt="séparation décoration"
+                            width="247" height="24">
+                        <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers
+                            coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,
+                            muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
+                        </p>
+                        <img class="epice" src="assets/images/ble.jpg" alt="Epi de blé" width="287" height="192">
+                        <img class="epice" src="assets/images/piment.jpg" alt="Epices rouge" width="244" height="218">
+                        <img class="epice" src="assets/images/pain.jpg" alt="Céréales, pains" width="211" height="144">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ****** Section REVIEWS ****** -->
+        <section id="menu" class="container-fluid3">
 
         </section>
-        <section id="reviews">
 
+        <!-- ****** Section REVIEWS ****** -->
+
+        <section id="reviews" class="container-fluid4 d-flex flex-column">
+            <div class="container">
+                <div class="row justify-content-lg-center">
+                    <div class="col-lg-6">
+                        <h3>Guest Reviews</h3>
+                        <img class="divider" src="assets/images/divider_reviews.png" alt="séparation décoration"
+                            width="247" height="24">
+                        <i class="fas fa-quote-left"></i>
+                        <p class="text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps
+                            our customers
+                            coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,
+                            muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
+                        </p>
+                        <p class="fin">- food inc, New York</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="reservations">
 
+        <!-- ****** Section RESERVATIONS ****** -->
+
+        <section id="reservations" class="container-fluid5 d-flex">
+            <div class="container">
+                <div class="row">
+                    <div id="riz" class="col-lg-3"></div>
+                    <div id="mueli" class="col-lg-3"></div>
+                    <div id="reservations" class="col-lg-6">
+                        <div class="row no-gutters">
+                            <!-- supp les paddings par defaut-->
+                            <div class="col-12 txt-col">
+                                <h3>Just the right food</h3>
+                                <img class="divider" src="assets/images/divider_about.png" alt="séparation décoration"
+                                    width="247" height="24">
+                                <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our
+                                    customers coming back for more. Perfect materials and freshly baked food.
+                                    Delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in
+                                    today and check us out! Perfect materials and freshly baked food.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- *** Formulaire de Réservation *** -->
+                        <div class="row no-gutters">
+                            <!-- Name -->
+                            <div class="left-col-form col-md-6">
+                                <label for="form_reservation" class="form-id"><b>Name</b></label>
+                                <input type="text" class="form-control input-style" id="formulaire"
+                                    placeholder="your name *">
+                            </div>
+                            <!-- Email -->
+                            <div class="right-col-form col-md-6">
+                                <label for="form_reservation" class="form-id"><b>Mail</b></label>
+                                <input type="email" class="form-control input-style" id="formulaire"
+                                    placeholder="your email *">
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <!-- Date -->
+                            <div class="left-col-form col-md-6">
+                                <label for="form_reservation" class="form-id"><b>Date</b></label>
+                                <input type="date" class="form-control input-style" id="formulaire"
+                                    placeholder="date *"><i class="far fa-calendar-alt"></i>
+                            </div>
+                            <!-- Numero -->
+                            <div class="right-col-form col-md-6">
+                                <label for="form_reservation" class="form-id"><b>Party number</b></label>
+                                <input type="number" class="form-control input-style" id="formulaire"
+                                    placeholder="party number *">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-md-6 justify-content-center">
+                                <input type="submit" class="form-control input-style" id="formulaire">
+                            </div>
+                            <div class="col"></div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
         </section>
     </main>
 
@@ -131,6 +242,14 @@
         </section>
 
     </footer>
+
+    <!-- **** Script du CDN de Bootstrap **** -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
 
 </body>
 
