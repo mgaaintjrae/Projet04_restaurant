@@ -31,7 +31,7 @@
 
 * {
   margin: 0;
-  height: 0;
+  padding: 0;
 }
 
 h1,
@@ -48,6 +48,7 @@ a {
 /* ********************* HEADER ************************ */
 body {
   /* ******************** MAIN ********************* */
+  /* ******************** FOOTER ********************* */
 }
 
 body header {
@@ -63,93 +64,79 @@ body header #navbar {
   position: fixed;
   width: 100%;
   height: 100px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(black));
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), black);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(black));
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), black);
   /* dégradé noir transparent de la navbar */
 }
 
 body header #navbar nav {
-  margin: 0 13% 0 8%;
+  width: 100%;
   height: 100px;
+}
+
+body header #navbar nav .col-lg-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-body header #navbar nav a {
-  display: contents;
-}
-
-body header #navbar nav a #logo {
+body header #navbar nav .col-lg-2 a #logo {
   width: 156px;
   height: 92px;
 }
 
-body header #navbar nav a a:hover {
-  color: #dab33e;
+body header #navbar nav .col-lg-2 a #logo:hover {
+  background-image: url("/assets/images/logo_jaune.png");
 }
 
 body header #navbar nav .menu {
   font-family: "gentium book basic";
-  font-size: 1.1em;
-  font-weight: bold;
+  font-size: 1.4em;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: white;
-  width: 65%;
-  margin: auto 5px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-body header #navbar nav .menu li a:before {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 0;
-  opacity: 0;
-  -webkit-transition: background .3s, width .2s;
-  transition: background .3s, width .2s;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-left: 19%;
+  padding-bottom: 1%;
+  color: #f4f4f5;
 }
 
 body header #navbar nav .icons {
-  width: auto;
   list-style: none;
-  display: contents;
-}
-
-body header #navbar nav .icons li a {
-  color: #dab33e;
-}
-
-body header #promo .content {
-  height: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 3% 1% 0;
+  margin-left: -2%;
+  line-height: 2;
 }
 
-body header #promo .content h1 {
+body header #navbar nav .icons i:hover {
+  color: #dab33e;
+}
+
+body header #promo {
+  height: 750px;
+}
+
+body header #promo .row #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header #promo .row h1 {
   color: #f4f4f5;
   text-shadow: 1px 1px #000000;
   margin-top: 10%;
@@ -159,7 +146,7 @@ body header #promo .content h1 {
   font-weight: normal;
 }
 
-body header #promo .content img {
+body header #promo .row img {
   display: block;
   height: auto;
   margin-left: auto;
@@ -168,7 +155,7 @@ body header #promo .content img {
   margin-top: 11%;
 }
 
-body header #promo .content .button {
+body header #promo .row #button {
   width: 490px;
   opacity: 0.8;
   margin-bottom: 13%;
@@ -181,7 +168,7 @@ body header #promo .content .button {
           justify-content: space-between;
 }
 
-body header #promo .content .button .left {
+body header #promo .row #button .left {
   height: 55px;
   width: 230px;
   font-family: 'lato';
@@ -196,7 +183,7 @@ body header #promo .content .button .left {
   transition: all 0.3s ease 0s;
 }
 
-body header #promo .content .button .right {
+body header #promo .row #button .right {
   height: 55px;
   width: 230px;
   font-family: 'lato';
@@ -211,7 +198,7 @@ body header #promo .content .button .right {
   transition: all 0.3s ease 0s;
 }
 
-body header #promo .content .button :hover {
+body header #promo .row #button :hover {
   border: 0.1px white solid;
   background-color: rgba(250, 249, 249, 0.349);
 }
@@ -219,41 +206,41 @@ body header #promo .content .button :hover {
 body main {
   /* *** SECTION ABOUT *** */
   /* ***SECTION INGREDIENTS*** */
-  /* ***SECTION INGREDIENTS*** */
+  /* ***SECTION MENU*** */
   /* ***SECTION REVIEWS*** */
+  /* ***SECTION RESERVATIONS*** */
 }
 
-body main .container-fluid {
+body main #about {
   height: 710px;
-  background-color: white;
-  background: url("../images/pattern.png") no-repeat fixed;
+  background: url("../images/fond_about.jpg") no-repeat fixed;
   background-size: cover;
 }
 
-body main .container-fluid .row {
+body main #about .container .row {
   padding: 3% 5% 5% 5%;
 }
 
-body main .container-fluid .row .col-md-6 {
+body main #about .container .row .col-md-6 {
   height: auto;
   padding-top: 4%;
 }
 
-body main .container-fluid .row .col-md-6 h2 {
+body main #about .container .row .col-md-6 h2 {
   height: auto;
   text-align: center;
   color: #dab33e;
   font-size: 2.5em;
 }
 
-body main .container-fluid .row .col-md-6 .divider {
+body main #about .container .row .col-md-6 .divider {
   width: 50%;
   display: block;
   height: auto;
   margin: 5% auto 0 auto;
 }
 
-body main .container-fluid .row .col-md-6 .text {
+body main #about .container .row .col-md-6 .text {
   font-size: 1.1em;
   font-family: "Lato";
   color: #4c4c4c;
@@ -261,30 +248,30 @@ body main .container-fluid .row .col-md-6 .text {
   padding: 9% 11% 9% 11%;
 }
 
-body main .container-fluid .row .col-md-6 .cook {
+body main #about .container .row .col-md-6 .cook {
   width: 192px;
   height: 195px;
   display: block;
   margin: 30% auto 0px 41%;
 }
 
-body main .container-fluid .row .col-md-6 {
+body main #about .container .row .col-md-6 {
   height: auto;
 }
 
-body main .container-fluid .row .col-md-6 img {
+body main #about .container .row .col-md-6 img {
   width: 621px;
   height: 625px;
   margin: -5% 0% 0% 2%;
 }
 
-body main .container-fluid2 {
+body main #ingredients {
   min-height: 750px;
   background: url("../images/fond_ingredients.jpg") no-repeat fixed;
   background-size: cover;
 }
 
-body main .container-fluid2 .container {
+body main #ingredients .container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -292,7 +279,7 @@ body main .container-fluid2 .container {
   margin-left: auto;
 }
 
-body main .container-fluid2 .container .row .col-md-6 {
+body main #ingredients .container .row .col-md-6 {
   width: 570px;
   height: 557px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -302,12 +289,12 @@ body main .container-fluid2 .container .row .col-md-6 {
   background-image: url("../images/fond_noir_translucide.png");
 }
 
-body main .container-fluid2 .container .row .col-md-6 h3 {
+body main #ingredients .container .row .col-md-6 h3 {
   color: #f4f4f5;
   font-size: 2.3em;
 }
 
-body main .container-fluid2 .container .row .col-md-6 .divider {
+body main #ingredients .container .row .col-md-6 .divider {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -317,14 +304,14 @@ body main .container-fluid2 .container .row .col-md-6 .divider {
   margin-bottom: 20px;
 }
 
-body main .container-fluid2 .container .row .col-md-6 p {
+body main #ingredients .container .row .col-md-6 p {
   color: #f4f4f5;
   font-size: 1em;
   display: block;
   margin: 5% 0% 39% 0%;
 }
 
-body main .container-fluid2 .container .row .col-md-6 .epice {
+body main #ingredients .container .row .col-md-6 .epice {
   height: 90px;
   width: 90px;
   margin: 10px 10px;
@@ -333,23 +320,23 @@ body main .container-fluid2 .container .row .col-md-6 .epice {
   border-style: solid;
 }
 
-body main .container-fluid2 .container .row .col-md-6 :hover {
-  border-color: rgba(255, 255, 255, 0.4);
+body main #ingredients .container .row .col-md-6 :hover {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
-body main .container-fluid3 {
+body main #menu {
   min-height: 990px;
-  background: url("../images/pattern_menu.jpg") no-repeat fixed;
+  background: url("../images/fond_menu.jpg") no-repeat fixed;
   background-size: cover;
 }
 
-body main .container-fluid4 {
+body main #reviews {
   min-height: 750px;
   background: url("../images/fond_reviews.jpg") no-repeat fixed;
   background-size: cover;
 }
 
-body main .container-fluid4 .container {
+body main #reviews .container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -357,7 +344,7 @@ body main .container-fluid4 .container {
   margin-left: auto;
 }
 
-body main .container-fluid4 .container .row .col-lg-6 {
+body main #reviews .container .row .col-lg-6 {
   width: 770px;
   height: 557px;
   background-image: url("../images/fond_noir_translucide_reviews.png");
@@ -366,13 +353,13 @@ body main .container-fluid4 .container .row .col-lg-6 {
   text-align: center;
 }
 
-body main .container-fluid4 .container .row .col-lg-6 h3 {
+body main #reviews .container .row .col-lg-6 h3 {
   color: #f4f4f5;
   font-size: 2.2em;
   margin-top: 48px;
 }
 
-body main .container-fluid4 .container .row .col-lg-6 .divider {
+body main #reviews .container .row .col-lg-6 .divider {
   width: 247px;
   height: 24px;
   display: block;
@@ -381,24 +368,80 @@ body main .container-fluid4 .container .row .col-lg-6 .divider {
   margin-right: auto;
 }
 
-body main .container-fluid4 .container .row .col-lg-6 i {
+body main #reviews .container .row .col-lg-6 i {
   display: block;
   margin: 10% 96% 0% -10%;
   color: #9fa29e;
 }
 
-body main .container-fluid4 .container .row .col-lg-6 .text {
+body main #reviews .container .row .col-lg-6 .text {
   color: #dde0df;
   display: block;
   margin-top: 7px;
 }
 
-body main .container-fluid4 .container .row .col-lg-6 .fin {
+body main #reviews .container .row .col-lg-6 .fin {
   color: #dde0df;
   display: block;
   font-size: 0.8em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 196px;
+}
+
+body main #reservations {
+  min-height: 710px;
+  background: url("../images/fond_reservations.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
+body main #reservations .container .row #riz {
+  width: 270px;
+  height: 507px;
+  display: block;
+  margin: 100px 0 100px 0;
+  padding-right: 3%;
+}
+
+body main #reservations .container .row #muesli {
+  width: 270px;
+  height: 507px;
+  display: block;
+  margin: 100px 0 100px 0;
+  padding-left: 3%;
+}
+
+body main #reservations .container .row #text_reservations {
+  display: block;
+  margin: 100px 0 100px 0;
+}
+
+body main #reservations .container .row #text_reservations .row #text_content {
+  text-align: center;
+}
+
+body main #reservations .container .row #text_reservations .row #text_content h3 {
+  color: #dab33e;
+}
+
+body main #reservations .container .row #text_reservations .row #text_content .divider {
+  width: 247px;
+  height: 24px;
+}
+
+body main #reservations .container .row #text_reservations .row #text_content .part1 {
+  font-family: 'lato';
+  color: #4c4c4c;
+}
+
+body main #reservations .container .row #text_reservations .row #text_content .part2 {
+  font-family: 'lato';
+  color: #4c4c4c;
+}
+
+body footer {
+  width: 100%;
+  height: 310px;
+  background-color: #191919;
 }
 /*# sourceMappingURL=style.css.map */
