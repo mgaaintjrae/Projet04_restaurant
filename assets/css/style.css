@@ -50,7 +50,8 @@ body header {
   height: auto;
   max-width: 100vw;
   background: url("../images/fond_promo.jpg") no-repeat fixed;
-  background: cover;
+  background-size: cover;
+  padding: 0 !important;
   /* *** SECTION PROMO *** */
 }
 
@@ -84,7 +85,7 @@ body header #navbar nav #logo a .logo {
 }
 
 body header #navbar nav #logo a #logo:hover {
-  background-image: url("/assets/images/logo_jaune.png");
+  background-image: url("../images/logo_jaune.png");
 }
 
 body header #navbar nav .menu {
@@ -100,6 +101,20 @@ body header #navbar nav .menu {
       align-self: center;
   padding-left: 19%;
   color: #f4f4f5;
+}
+
+@media screen and (max-width: 768px) {
+  body header #navbar nav .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: none;
+  }
+}
+
+body header #navbar nav .menu li {
+  padding: 2%;
 }
 
 body header #navbar nav .menu li a {
@@ -126,12 +141,26 @@ body header #navbar nav .icons {
   line-height: 2;
 }
 
+@media screen and (max-width: 576px) {
+  body header #navbar nav .icons {
+    display: none;
+  }
+}
+
 body header #navbar nav .icons li a {
   color: #dab33e;
 }
 
 body header #navbar nav .icons li a:hover {
   color: #f4f4f5;
+}
+
+@media screen and (max-width: 576px) {
+  body header #navbar nav i {
+    display: block;
+    color: #dab33e;
+    margin: -16% 0% 0% 88%;
+  }
 }
 
 body header #promo {
@@ -148,6 +177,12 @@ body header #promo .container .row #title h1 {
   text-shadow: 1px 1px #000000;
   font-size: 82px;
   width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  body header #promo .container .row #title h1 {
+    font-size: 50px;
+  }
 }
 
 body header #promo .container .row #title img {
@@ -169,6 +204,17 @@ body header #promo .container .row #button {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 40px;
+}
+
+@media screen and (max-width: 576px) {
+  body header #promo .container .row #button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 5%;
+    width: 0;
+  }
 }
 
 body header #promo .container .row #button a .left {
@@ -226,26 +272,32 @@ body main #about .container .row {
   padding: 3% 5% 5% 5%;
 }
 
-body main #about .container .row .col-xs-5 {
+body main #about .container .row .content {
   height: auto;
   padding-top: 4%;
 }
 
-body main #about .container .row .col-xs-5 h2 {
+@media screen and (max-width: 576px) {
+  body main #about .container .row .content {
+    padding-top: 40%;
+  }
+}
+
+body main #about .container .row .content h2 {
   height: auto;
   text-align: center;
   color: #dab33e;
   font-size: 2.5em;
 }
 
-body main #about .container .row .col-xs-5 .divider {
+body main #about .container .row .content .divider {
   width: 50%;
   display: block;
   height: auto;
   margin: 5% auto 0 auto;
 }
 
-body main #about .container .row .col-xs-5 .text {
+body main #about .container .row .content .text {
   font-size: 1.1em;
   font-family: "Lato";
   color: #4c4c4c;
@@ -253,19 +305,27 @@ body main #about .container .row .col-xs-5 .text {
   margin-top: 20px;
 }
 
-body main #about .container .row .col-xs-5 .cook {
+body main #about .container .row .content .cook {
   width: 192px;
   height: 195px;
   display: block;
   margin: 7% auto 0px 41%;
 }
 
+@media screen and (max-width: 576px) {
+  body main #about .container .row .content .cook {
+    display: none;
+  }
+}
+
 body main #about .container .row .dish {
   height: auto;
 }
 
-body main #about .container .row .dish img {
-  display: none;
+@media screen and (max-width: 992px) {
+  body main #about .container .row .dish {
+    display: none;
+  }
 }
 
 body main #ingredients {
@@ -290,6 +350,12 @@ body main #ingredients .container .row .col-md-6 {
   padding: 50px;
   text-align: center;
   background-image: url("../images/fond_noir_translucide.png");
+}
+
+@media screen and (max-width: 576px) {
+  body main #ingredients .container .row .col-md-6 {
+    width: 300px;
+  }
 }
 
 body main #ingredients .container .row .col-md-6 h3 {
@@ -324,12 +390,21 @@ body main #ingredients .container .row .col-md-6 .epice {
   margin-top: -100px;
 }
 
+@media screen and (max-width: 576px) {
+  body main #ingredients .container .row .col-md-6 .epice {
+    height: 45px;
+    width: 45px;
+    margin-bottom: 100px;
+    display: inline-block;
+  }
+}
+
 body main #ingredients .container .row .col-md-6 :hover {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
 body main #menu {
-  min-height: 990px;
+  min-height: 300px;
   background: url("../images/fond_menu.jpg") no-repeat fixed;
   background-size: cover;
 }
@@ -357,31 +432,41 @@ body main #reviews .container .row .col-lg-6 {
   text-align: center;
 }
 
+@media screen and (max-width: 576px) {
+  body main #reviews .container .row .col-lg-6 {
+    width: 300px;
+  }
+}
+
 body main #reviews .container .row .col-lg-6 h3 {
   color: #f4f4f5;
   font-size: 2.2em;
   margin-top: 48px;
 }
 
+@media screen and (max-width: 576px) {
+  body main #reviews .container .row .col-lg-6 h3 {
+    margin-top: 0;
+  }
+}
+
 body main #reviews .container .row .col-lg-6 .divider {
   width: 247px;
   height: 24px;
   display: block;
-  margin-top: 61px;
+  margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
 }
 
 body main #reviews .container .row .col-lg-6 i {
   display: block;
-  margin: 10% 96% 0% -10%;
+  margin: 10% 96% -3% -10%;
   color: #9fa29e;
 }
 
 body main #reviews .container .row .col-lg-6 .text {
   color: #dde0df;
-  display: block;
-  margin-top: 7px;
 }
 
 body main #reviews .container .row .col-lg-6 .fin {
@@ -390,7 +475,7 @@ body main #reviews .container .row .col-lg-6 .fin {
   font-size: 0.8em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 196px;
+  margin-top: 40px;
 }
 
 body main #reservations {
@@ -411,12 +496,24 @@ body main #reservations .container .row #riz {
   padding-right: 3%;
 }
 
+@media screen and (max-width: 576px) {
+  body main #reservations .container .row #riz {
+    display: none;
+  }
+}
+
 body main #reservations .container .row #muesli {
   width: 270px;
   height: 507px;
   display: block;
   margin: 100px 0 100px 0;
   padding-left: 3%;
+}
+
+@media screen and (max-width: 576px) {
+  body main #reservations .container .row #muesli {
+    display: none;
+  }
 }
 
 body main #reservations .container .row #text_reservations {
