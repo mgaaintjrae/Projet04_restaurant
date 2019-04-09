@@ -106,7 +106,7 @@ body {
 
 
                     li {
-                        padding: 2%;
+                        padding: 4%;
 
                         a {
                             text-decoration: none;
@@ -129,7 +129,7 @@ body {
                     margin-left: -2%;
                     line-height: 2;
 
-                    @media screen and(max-width: 576px) {
+                    @media screen and(max-width: 768px) {
                         display: none;
 
                     }
@@ -147,7 +147,8 @@ body {
                     }
                 }
 
-                i {                   
+                #burger { 
+                    display:none;                  
 
                     @media screen and(max-width: 576px) {
                         display: block;
