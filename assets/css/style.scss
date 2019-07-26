@@ -109,7 +109,9 @@ header {
 
     .container {
         .row {
+            
             #title {
+                padding-top:70px;
                 text-align: center;
                 margin-top: 190px;
 
@@ -144,7 +146,7 @@ header {
                 list-style: none;
                 display: flex;
                 justify-content: center;
-                margin-top: 40px;
+                // margin-top: 40px;
 
                 @media screen and(max-width: 576px) {
                     flex-direction: column;
