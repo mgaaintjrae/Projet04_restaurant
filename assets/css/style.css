@@ -3,28 +3,28 @@
 /* ************** POLICES **************** */
 @font-face {
   font-family: "gentium";
-  src: url("assets/fonts/GentiumBookBasicRegular.ttf");
+  src: url("../fonts/GentiumBookBasicRegular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "yeseva";
-  src: url("assets/fonts/YesevaOne-Regular.ttf");
+  src: url("../fonts/YesevaOne-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lato";
-  src: url("assets/fonts/Lato-Regular.ttf");
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "opensans";
-  src: url("assets/fonts/OpenSans-Regular.ttf");
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -42,154 +42,84 @@ h3 {
 
 /* ********************* HEADER ************************ */
 body {
-  /* ******************** MAIN ********************* */
-  /* ******************** FOOTER ********************* */
+  /* *** NAVBAR *** */
 }
 
-body header {
-  height: auto;
-  max-width: 100vw;
-  background: url("../images/fond_promo.jpg") no-repeat fixed;
+body .navbar-brand {
+  line-height: 100px;
+  font-size: 28px;
+  font-family: 'gentium', 'opensans';
+  font-weight: bolder;
+  color: #ffffff !important;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+body .navbargrad {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  /* Standard syntax (must be last) */
+}
+
+body .navbar-collapse {
+  font-family: 'gentium', 'opensans';
+  font-size: 21px;
+  color: "fff";
+}
+
+body .navbar-dark .navbar-nav .nav-link:hover {
+  color: #cc9900;
+}
+
+body .navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+body .navbar-nav .nav-link {
+  padding-right: 10;
+  padding-left: 10;
+}
+
+body .navbar-nav > li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body .nav-link a {
+  color: #cc9900;
+}
+
+body .nav-link a:hover {
+  color: white;
+}
+
+/* *** SECTION PROMO *** */
+header {
+  height: 100vh;
+  min-height: 758px;
+  background: url("../images/fond_promo.jpg") no-repeat center fixed;
   background-size: cover;
-  padding: 0 !important;
-  /* *** SECTION PROMO *** */
 }
 
-body header #navbar {
-  z-index: 1;
-  position: fixed;
-  width: 100%;
-  height: 100px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(black));
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), black);
-  /* dégradé noir transparent de la navbar */
-}
-
-body header #navbar nav {
-  width: 100%;
-  height: 100px;
-}
-
-body header #navbar nav #logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-body header #navbar nav #logo a .logo {
-  width: 156px;
-  height: 92px;
-}
-
-body header #navbar nav #logo a #logo:hover {
-  background-image: url("../images/logo_jaune.png");
-}
-
-body header #navbar nav .menu {
-  font-family: "gentium book basic";
-  font-size: 1.4em;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-item-align: center;
-      align-self: center;
-  padding-left: 19%;
-  color: #f4f4f5;
-}
-
-@media screen and (max-width: 768px) {
-  body header #navbar nav .menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    display: none;
-  }
-}
-
-body header #navbar nav .menu li {
-  padding: 4%;
-}
-
-body header #navbar nav .menu li a {
-  text-decoration: none;
-  color: #f4f4f5;
-}
-
-body header #navbar nav .menu li a:hover {
-  color: #dab33e;
-}
-
-body header #navbar nav .icons {
-  color: #dab33e;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-right: 3%;
-  margin-left: -2%;
-  line-height: 2;
-}
-
-@media screen and (max-width: 768px) {
-  body header #navbar nav .icons {
-    display: none;
-  }
-}
-
-body header #navbar nav .icons li a {
-  color: #dab33e;
-}
-
-body header #navbar nav .icons li a:hover {
-  color: #f4f4f5;
-}
-
-body header #navbar nav #burger {
-  display: none;
-}
-
-@media screen and (max-width: 576px) {
-  body header #navbar nav #burger {
-    display: block;
-    color: #dab33e;
-    margin: -16% 0% 0% 88%;
-  }
-}
-
-body header #promo {
-  min-height: 750px;
-}
-
-body header #promo .container .row #title {
+header .container .row #title {
   text-align: center;
   margin-top: 190px;
 }
 
-body header #promo .container .row #title h1 {
+header .container .row #title h1 {
+  font-size: 80px;
   color: #f4f4f5;
   text-shadow: 1px 1px #000000;
-  font-size: 82px;
-  width: 100%;
+  font-family: 'yeseva', 'opensans';
 }
 
 @media screen and (max-width: 576px) {
-  body header #promo .container .row #title h1 {
+  header .container .row #title h1 {
     font-size: 50px;
   }
 }
 
-body header #promo .container .row #title img {
+header .container .row #title img {
   display: block;
   height: auto;
   width: 232px;
@@ -197,7 +127,12 @@ body header #promo .container .row #title img {
   margin-right: auto;
 }
 
-body header #promo .container .row #button {
+header .container .button {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+header .container .button #button {
   width: 100%;
   opacity: 0.8;
   list-style: none;
@@ -211,7 +146,7 @@ body header #promo .container .row #button {
 }
 
 @media screen and (max-width: 576px) {
-  body header #promo .container .row #button {
+  header .container .button #button {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -221,7 +156,8 @@ body header #promo .container .row #button {
   }
 }
 
-body header #promo .container .row #button a .left {
+header .container .button #button a .left {
+  margin-bottom: 20px;
   height: 55px;
   width: 230px;
   font-family: 'lato';
@@ -237,7 +173,7 @@ body header #promo .container .row #button a .left {
   margin-right: 15%;
 }
 
-body header #promo .container .row #button a .right {
+header .container .button #button a .right {
   height: 55px;
   width: 230px;
   font-family: 'lato';
@@ -253,63 +189,66 @@ body header #promo .container .row #button a .right {
   margin-left: 10%;
 }
 
-body header #promo .container .row #button a :hover {
+header .container .button #button a :hover {
   border: 0.9px white solid;
   background-color: rgba(250, 249, 249, 0.349);
 }
 
-body main {
+/* ******************** MAIN ********************* */
+main {
   /* *** SECTION ABOUT *** */
   /* ***SECTION INGREDIENTS*** */
   /* ***SECTION MENU*** */
+  /* redondance avec About-content-container */
+  /* Cette classe permet d'aligner et de coller de chaque cÃ´tÃŠ du container, le nom du plat et son prix */
   /* ***SECTION REVIEWS*** */
   /* ***SECTION RESERVATIONS*** */
 }
 
-body main #about {
+main #about {
   height: 710px;
   background: url("../images/fond_about.jpg") no-repeat fixed;
   background-size: cover;
 }
 
-body main #about .container .row {
+main #about .container .row {
   padding: 3% 5% 5% 5%;
 }
 
-body main #about .container .row .content {
+main #about .container .row .content {
   height: auto;
   padding-top: 4%;
 }
 
 @media screen and (max-width: 576px) {
-  body main #about .container .row .content {
+  main #about .container .row .content {
     padding-top: 40%;
   }
 }
 
-body main #about .container .row .content h2 {
+main #about .container .row .content h2 {
   height: auto;
   text-align: center;
   color: #dab33e;
   font-size: 2.5em;
 }
 
-body main #about .container .row .content .divider {
+main #about .container .row .content .divider {
   width: 50%;
   display: block;
   height: auto;
   margin: 5% auto 0 auto;
 }
 
-body main #about .container .row .content .text {
+main #about .container .row .content .text {
   font-size: 1.1em;
-  font-family: "Lato";
+  font-family: "lato";
   color: #4c4c4c;
   text-align: center;
   margin-top: 20px;
 }
 
-body main #about .container .row .content .cook {
+main #about .container .row .content .cook {
   width: 192px;
   height: 195px;
   display: block;
@@ -317,28 +256,28 @@ body main #about .container .row .content .cook {
 }
 
 @media screen and (max-width: 576px) {
-  body main #about .container .row .content .cook {
+  main #about .container .row .content .cook {
     display: none;
   }
 }
 
-body main #about .container .row .dish {
+main #about .container .row .dish {
   height: auto;
 }
 
 @media screen and (max-width: 992px) {
-  body main #about .container .row .dish {
+  main #about .container .row .dish {
     display: none;
   }
 }
 
-body main #ingredients {
+main #ingredients {
   min-height: 750px;
   background: url("../images/fond_ingredients.jpg") no-repeat fixed;
   background-size: cover;
 }
 
-body main #ingredients .container {
+main #ingredients .container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -346,7 +285,7 @@ body main #ingredients .container {
   margin-left: auto;
 }
 
-body main #ingredients .container .row .col-md-6 {
+main #ingredients .container .row .col-md-6 {
   width: 570px;
   height: 557px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -356,18 +295,12 @@ body main #ingredients .container .row .col-md-6 {
   background-image: url("../images/fond_noir_translucide.png");
 }
 
-@media screen and (max-width: 576px) {
-  body main #ingredients .container .row .col-md-6 {
-    width: 300px;
-  }
-}
-
-body main #ingredients .container .row .col-md-6 h3 {
+main #ingredients .container .row .col-md-6 h3 {
   color: #f4f4f5;
   font-size: 2.3em;
 }
 
-body main #ingredients .container .row .col-md-6 .divider {
+main #ingredients .container .row .col-md-6 .divider {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -377,14 +310,14 @@ body main #ingredients .container .row .col-md-6 .divider {
   margin-bottom: 20px;
 }
 
-body main #ingredients .container .row .col-md-6 p {
+main #ingredients .container .row .col-md-6 p {
   color: #f4f4f5;
   font-size: 1em;
   display: block;
   margin: 0px -20px 133px -20px;
 }
 
-body main #ingredients .container .row .col-md-6 .epice {
+main #ingredients .container .row .col-md-6 .epice {
   height: 90px;
   width: 90px;
   margin: 10px 10px;
@@ -394,32 +327,77 @@ body main #ingredients .container .row .col-md-6 .epice {
   margin-top: -100px;
 }
 
-@media screen and (max-width: 576px) {
-  body main #ingredients .container .row .col-md-6 .epice {
-    height: 45px;
-    width: 45px;
-    margin-bottom: 100px;
-    display: inline-block;
-  }
-}
-
-body main #ingredients .container .row .col-md-6 :hover {
+main #ingredients .container .row .col-md-6 :hover {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
-body main #menu {
-  min-height: 300px;
-  background: url("../images/fond_menu.jpg") no-repeat fixed;
+main #Menu {
+  background: url("../images/fond_menu.jpg") no-repeat;
+  min-height: 994px;
   background-size: cover;
 }
 
-body main #reviews {
+main #Menu-content-container {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+main #left-menu {
+  min-height: 794px;
+  text-align: center;
+}
+
+main #right-menu {
+  min-height: 520px;
+  text-align: center;
+}
+
+main .Menu-title {
+  font-size: 40px;
+  color: #c90;
+  text-align: center;
+  font-family: "yeseva";
+}
+
+main .Menu-title-bottom {
+  padding-top: 40px;
+}
+
+main .flex-container {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 30px;
+  width: auto;
+  text-align: center;
+  font-family: "yeseva";
+  color: #c90;
+  font-size: 21px;
+}
+
+main .separator {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+main .ingredients {
+  font-family: "lato";
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+
+main #reviews {
   min-height: 750px;
   background: url("../images/fond_reviews.jpg") no-repeat fixed;
   background-size: cover;
 }
 
-body main #reviews .container {
+main #reviews .container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -427,7 +405,7 @@ body main #reviews .container {
   margin-left: auto;
 }
 
-body main #reviews .container .row .col-lg-6 {
+main #reviews .container .row .col-lg-6 {
   width: 770px;
   height: 557px;
   background-image: url("../images/fond_noir_translucide_reviews.png");
@@ -436,25 +414,19 @@ body main #reviews .container .row .col-lg-6 {
   text-align: center;
 }
 
-@media screen and (max-width: 576px) {
-  body main #reviews .container .row .col-lg-6 {
-    width: 300px;
-  }
-}
-
-body main #reviews .container .row .col-lg-6 h3 {
+main #reviews .container .row .col-lg-6 h3 {
   color: #f4f4f5;
   font-size: 2.2em;
   margin-top: 48px;
 }
 
 @media screen and (max-width: 576px) {
-  body main #reviews .container .row .col-lg-6 h3 {
+  main #reviews .container .row .col-lg-6 h3 {
     margin-top: 0;
   }
 }
 
-body main #reviews .container .row .col-lg-6 .divider {
+main #reviews .container .row .col-lg-6 .divider {
   width: 247px;
   height: 24px;
   display: block;
@@ -463,17 +435,17 @@ body main #reviews .container .row .col-lg-6 .divider {
   margin-right: auto;
 }
 
-body main #reviews .container .row .col-lg-6 i {
+main #reviews .container .row .col-lg-6 i {
   display: block;
   margin: 10% 96% -3% -10%;
   color: #9fa29e;
 }
 
-body main #reviews .container .row .col-lg-6 .text {
+main #reviews .container .row .col-lg-6 .text {
   color: #dde0df;
 }
 
-body main #reviews .container .row .col-lg-6 .fin {
+main #reviews .container .row .col-lg-6 .fin {
   color: #dde0df;
   display: block;
   font-size: 0.8em;
@@ -482,17 +454,17 @@ body main #reviews .container .row .col-lg-6 .fin {
   margin-top: 40px;
 }
 
-body main #reservations {
+main #reservations {
   min-height: 710px;
   background: url("../images/fond_reservations.jpg") no-repeat fixed;
   background-size: cover;
 }
 
-body main #reservations .container {
+main #reservations .container {
   /**** Formulaire ****/
 }
 
-body main #reservations .container .row #riz {
+main #reservations .container .row #riz {
   width: 270px;
   height: 507px;
   display: block;
@@ -501,12 +473,12 @@ body main #reservations .container .row #riz {
 }
 
 @media screen and (max-width: 576px) {
-  body main #reservations .container .row #riz {
+  main #reservations .container .row #riz {
     display: none;
   }
 }
 
-body main #reservations .container .row #muesli {
+main #reservations .container .row #muesli {
   width: 270px;
   height: 507px;
   display: block;
@@ -515,56 +487,61 @@ body main #reservations .container .row #muesli {
 }
 
 @media screen and (max-width: 576px) {
-  body main #reservations .container .row #muesli {
+  main #reservations .container .row #muesli {
     display: none;
   }
 }
 
-body main #reservations .container .row #text_reservations {
+main #reservations .container .row #text_reservations {
   display: block;
   margin: 100px 0 100px 0;
   padding: 4%;
 }
 
-body main #reservations .container .row #text_reservations .row #text_content {
+main #reservations .container .row #text_reservations .row #text_content {
   text-align: center;
 }
 
-body main #reservations .container .row #text_reservations .row #text_content h3 {
+main #reservations .container .row #text_reservations .row #text_content h3 {
   color: #dab33e;
   font-size: 30px;
 }
 
-body main #reservations .container .row #text_reservations .row #text_content .divider {
+main #reservations .container .row #text_reservations .row #text_content .divider {
   width: 247px;
   height: 24px;
 }
 
-body main #reservations .container .row #text_reservations .row #text_content .part1 {
+main #reservations .container .row #text_reservations .row #text_content .part1 {
   font-family: 'lato';
   color: #4c4c4c;
 }
 
-body main #reservations .container .row #text_reservations .row #text_content .part2 {
+main #reservations .container .row #text_reservations .row #text_content .part2 {
   font-family: 'lato';
   color: #4c4c4c;
 }
 
-body main #reservations .container .row div label {
+main #reservations .container .row div label {
   color: #dab33e;
 }
 
-body main #reservations .container #book_now div input {
+main #reservations .container #book_now div {
+  margin-top: 20px;
+}
+
+main #reservations .container #book_now div input {
   background-color: #dab33e;
   color: #f4f4f5;
 }
 
-body footer {
+/* ******************** FOOTER ********************* */
+footer {
   width: 100%;
   background-color: #191919;
 }
 
-body footer .container {
+footer .container {
   color: #f4f4f5;
   padding: 50px 0 50px 0;
   text-align: center;
@@ -581,25 +558,25 @@ body footer .container {
   font-size: 14px;
 }
 
-body footer .container h4 {
+footer .container h4 {
   font-size: 1.2em;
-  font-family: 'yeseva one';
+  font-family: 'yeseva';
 }
 
-body footer .container img {
+footer .container img {
   margin: 10px 0 10px 0;
 }
 
-body footer .container ul li {
+footer .container ul li {
   list-style: none;
 }
 
-body footer .container i {
+footer .container i {
   margin: 2%;
   padding-top: 23px;
 }
 
-body footer .container i:hover {
+footer .container i:hover {
   color: #dab33e;
 }
 /*# sourceMappingURL=style.css.map */
